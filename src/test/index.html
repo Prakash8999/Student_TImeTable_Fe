@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Vasanatdada Patil College OF Engineering</a></li>
+            <li><a href="https://pvppcoe.ac.in/">Home</a></li>
+            <li><a href="https://pvppcoe.ac.in/contact-us/">Contact</a></li>
+            <LI><A href="https://pvppcoe.ac.in/#">About Us</A></LI>
+        </ul>
+    </nav>
+    
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Student Login</h2>
+            <form action="student-login.php" method="post">
+                <input type="text" name="studentUsername" placeholder="Username" required >
+                <input type="password" name="studentPassword" placeholder="Password" required >
+                <button type="submit">Login</button>
+            </form>
+            <div class="content-link">
+                <a href="content.html">Go to Content Page</a>
+            </div>
+        </div>
+        
+        <div class="login-box">
+            <h2>Admin Login</h2>
+            <form action="admin-login.php" method="post">
+                <input type="text" name="adminUsername" placeholder="Username" required>
+                <input type="password" name="adminPassword" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+    
+</body>
+</html>

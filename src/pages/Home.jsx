@@ -1,24 +1,27 @@
 import React from 'react'
-import logo from '../logo.svg';
+import { Link } from 'react-router-dom'
+import image from '../assets/COLLEGE.jpeg'
 
 const Home = () => {
 	//  Template Code
 	return (
 		<>
-			<div className='relative bg z-0' >
-				<section className='flex-col Nunito relative z-10 h-screen w-screen overflow-hidden flex items-center justify-center'>
-					<h1 className='text-4xl text-white font-bold -mt-20 mb-20 w-[50vw] text-center'>A complete boilerplate for your next tailwind and React project!</h1>
-					<div className='flex'>
-						<div className='w-[30vw] items-center justify-center flex flex-col'>
-							<img src={logo} className="h-[20vh]" alt="" />
-							<h2 className='text-2xl font-bold text-white text-center'>ReactJs</h2>
-						</div>
-						<div className='w-[30vw] items-center justify-center flex flex-col'>
-							<img className="h-[20vh]" src="https://camo.githubusercontent.com/bcd4bda49ef6cd9537db065920f4f4f6ac670eae0e0adf2c5133c19b319f1574/68747470733a2f2f627261646c632e67616c6c65727963646e2e76736173736574732e696f2f657874656e73696f6e732f627261646c632f7673636f64652d7461696c77696e646373732f302e322e302f313535383034303536333634392f4d6963726f736f66742e56697375616c53747564696f2e53657276696365732e49636f6e732e44656661756c74" alt="" />
-							<h2 className='text-2xl font-bold text-white text-center'>TailwindCSS</h2>
-						</div>
-					</div>
-				</section>
+			<div className='  w-full h-screen overflow-hidden ' style={{backgroundImage:`url(${image})`}}>
+				<nav class="navbar" className='py-4 bg-blue-500'>
+				
+					<ul className='flex justify-center items-center gap-x-12 text-xl '>
+						<li><a href="#" >Vasanatdada Patil College OF Engineering</a></li>
+						<li><a href="https://pvppcoe.ac.in/" target='_blank'>Home</a></li>
+						<li><a href="https://pvppcoe.ac.in/contact-us/" target='_blank'>Contact</a></li>
+						<li><a href="https://pvppcoe.ac.in/#" target='_blank'>About Us</a></li>
+					</ul>
+				</nav>
+<div className='flex justify-center items-center h-full gap-x-20'>
+
+
+				<Link to={'/studentlogin'} type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Student Login</Link>
+				<Link to={'/teacherlogin'} type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Teacher Login</Link>
+</div>
 			</div>
 		</>
 	)
